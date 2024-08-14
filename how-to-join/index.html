@@ -52,11 +52,46 @@
         <div class="item">
           <div class="inner">
             <img src="images/server.gif" style="height: 355px" />
-            <a>THE HUB</a>
+            <a
+              >How I can join the NJ-Craft Minecraft Server
+              <i class="ri-question-line"></i
+            ></a>
             <p>
-              The HUB enables the player to get to the desired game quickly and
-              specifically, as the HUB has a very simple and user-friendly
-              system.
+              1) First start Minecraft version
+              <code>1.20.4</code> (Java Edition).<br />
+              2) Then click on the <code>Multiplayer</code> button.<br />
+              3) Click on the <code>Click to COPY</code> button and enter the
+              server IP;<br />
+              <button class="doc">Click to COPY</button><br />
+
+              <script>
+                const buttons = document.getElementsByClassName("doc");
+
+                for (let i = 0; i < buttons.length; i++) {
+                  buttons[i].addEventListener("click", function () {
+                    const button = buttons[i];
+                    const originalText = button.textContent;
+                    const originalBackgroundColor =
+                      button.style.backgroundColor;
+
+                    navigator.clipboard
+                      .writeText("NJ-Craft.com")
+                      .then(function () {
+                        button.style.backgroundColor = "green";
+                        button.textContent = "IP-Copyed";
+                        setTimeout(function () {
+                          button.style.backgroundColor =
+                            originalBackgroundColor;
+                          button.textContent = originalText;
+                          button.style.marginLeft = originalMarginLeft;
+                        }, 2800);
+                      })
+                      .catch(function (error) {
+                        console.error("Error copying to clipboard: ", error);
+                      });
+                  });
+                }
+              </script>
             </p>
           </div>
         </div>
