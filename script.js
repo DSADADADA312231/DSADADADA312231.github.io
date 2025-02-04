@@ -89,7 +89,7 @@ document.addEventListener("keydown", function (event) {
 
 //Snowfall
 
-const canvas = document.getElementById("snowfall");
+/* const canvas = document.getElementById("snowfall");
 const ctx = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
@@ -155,4 +155,4 @@ window.addEventListener("resize", () => {
 });
 
 createSnowflakes();
-animateSnowfall();
+animateSnowfall(); */
